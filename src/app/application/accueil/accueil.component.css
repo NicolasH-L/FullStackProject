@@ -6,3 +6,11 @@
     display: block;
     width:100%;
 }
+
+.bg-gradient {
+    background: linear-gradient(to top, #000000 0%, #ffffff 100%)
+}
+
+p{
+    color: cornsilk;
+}
