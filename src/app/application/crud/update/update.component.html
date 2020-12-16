@@ -1,0 +1,96 @@
+<!--
+ * @Author Nicolas Hong-Lao
+ * matricule: 1460618
+ * Github user: NicolasH-L
+-->
+
+<div class="registration-form">
+    <h2 class="text-center">Mise à jour du formulaire de location</h2>
+    <form [formGroup]="updateCarForm" (ngSubmit)="updateCar()">
+        <div *ngIf="checkMessage  != ''">
+            <h4 class="has-info">{{checkMessage}}</h4>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Nom</label>
+            <input id="name" formControlName="nom" class="form-control" [(ngModel)]="voiture.nom" />
+            <div *ngIf="!carFormUpdate.nom.valid && (carFormUpdate.nom.dirty || carFormUpdate.nom.touched)">
+                <div [hidden]="!carFormUpdate.nom.errors.required">Ce champs est obligatoire</div>
+                <div [hidden]="!carFormUpdate.nom.errors.minlength">L'élément doit contenir au moins 2 charactères</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Prénom</label>
+            <input id="name" formControlName="prenom" class="form-control" [(ngModel)]="voiture.prenom" />
+            <div *ngIf="!carFormUpdate.prenom.valid && (carFormUpdate.prenom.dirty || carFormUpdate.prenom.touched)">
+                <div [hidden]="!carFormUpdate.prenom.errors.required">Ce champs est obligatoire</div>
+                <div [hidden]="!carFormUpdate.prenom.errors.minlength">L'élément doit contenir au moins 2 charactères
+                </div>
+            </div>
+        </div>
+
+        <p>Type de modèle</p>
+        <div class="form-group">
+            <div class="form-check">
+                <input type="radio" class="form-check-input" formControlName="modele" [(ngModel)]="voiture.modele"
+                    id="modeleHatchback" value="Hatchback" ngModel>
+                <label for="modeleHatchback" class="form-check-label">Hatchback</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" formControlName="modele" [(ngModel)]="voiture.modele"
+                    id="modeleVUS" value="VUS" ngModel>
+                <label for="modeleVUS" class="form-check-label">VUS</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" formControlName="modele" [(ngModel)]="voiture.modele"
+                    id="modeleSport" value="Sport" ngModel>
+                <label for="modeleSport" class="form-check-label">Sport</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="couleur">Couleur</label>
+            <select class="form-control" id="couleur" formControlName="couleur" [(ngModel)]="voiture.couleur">
+                <option>Blanc</option>
+                <option>Rouge</option>
+                <option>Bleue</option>
+                <option>Gris</option>
+                <option>Noir</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fabriquant">Fabriquant</label>
+            <select class="form-control" id="fabriquant" formControlName="fabriquant" [(ngModel)]="voiture.fabriquant">
+                <option>Ford</option>
+                <option>Toyota</option>
+                <option>Honda</option>
+                <option>Chevrolet</option>
+                <option>Ferrari</option>
+                <option>Mercedes</option>
+                <option>Porsche</option>
+                <option>Dodge</option>
+                <option>Mazda</option>
+                <option>Volkswagen</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="paymentType">Type de paiement</label>
+            <select class="form-control" id="paiement" formControlName="paiement" [(ngModel)]="voiture.paiement">
+                <option>Quotidien</option>
+                <option>Hebdomadaire</option>
+                <option>Mensuel</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="submit"></label>
+            <div class="col-md-8">
+                <button id="submit" name="submit" class="btn btn-success">Soumettre</button>
+                <a routerLink="/crud" id="cancel" name="cancel" class="btn btn-danger">Annuler</a>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,49 @@
+<!--
+ * @Author Nicolas Hong-Lao
+ * matricule: 1460618
+ * Github user: NicolasH-L
+-->
+
+<Header>
+    <nav class="navbar navbar-expand-md navbar-light bg-dark">
+        <div class="container-fluid">
+
+            <a href="https://github.com/NicolasH-L/ProjetFullStack" class="navbar-brand font-weight-bold text-white">
+                <i class="fas fa-car fa-2x"></i><span class="ml-4">Nicolas H-L</span></a>
+            <button class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav"><span
+                    class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="nav">
+                <ul class="navbar-nav align-self-end">
+                    <li class="nav-item dropdown d-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenu" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item"><a routerLink="accueil"
+                            class="nav-link font-weight-bold text-capitalize text-light">Accueil</a></li>
+                    <li class="nav-item dropdown" data-toggle="dropdown">
+                        <a class="nav-link font-weight-bold text-capitalize text-light dropdown-toggle">Tutoriels</a>
+                        <div class="dropdown-menu">
+                            <a [routerLink]="['/tutoriel', 1]" class="dropdown-item">Mini tutoriel Angular 10</a>
+                            <a [routerLink]="['/tutoriel', 2]" class="dropdown-item">Mini tutoriel CRUD</a>
+                            <a [routerLink]="['/tutoriel', 3]" class="dropdown-item">Mini tutoriel des relations</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a [routerLink]="['formulaire']"
+                            class="nav-link font-weight-bold text-capitalize text-light">Formulaire</a></li>
+                    <li class="nav-item"><a [routerLink]="['crud']"
+                            class="nav-link font-weight-bold text-capitalize text-light">CRUD</a></li>
+                    <li class="nav-item"><a [routerLink]="['/fun']"
+                            class="nav-link font-weight-bold text-capitalize text-light">Fun</a></li>
+                    <li class="nav-item"><a [routerLink]="['/youtube']"
+                            class="nav-link font-weight-bold text-capitalize text-light">Youtube</a></li>
+                    <li class="nav-item"><a [routerLink]="['/contact']"
+                            class="nav-link font-weight-bold text-capitalize text-light">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</Header>

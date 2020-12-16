@@ -1,0 +1,170 @@
+<!--
+ * @Author Nicolas Hong-Lao
+ * matricule: 1460618
+ * Github user: NicolasH-L
+-->
+
+<ng-container *ngIf="myParameter == 1; then tutoAngular; else tutoCrud">
+</ng-container>
+
+<ng-template #tutoAngular>
+    <div class="container-fluid">
+        <h1 class="text-center pt-3 pb-3">Mini tutoriel sur Angular</h1>
+        <p>C'est quoi? : Un framework front-end web open source qui permet de créer des applications web
+            multiplateformes.
+            Cela nous permet de faire des pages SPA (c'est-à-dire Single Page Application) ou SSO (Single Sign On). De
+            plus, cela nous permet de faire l'injection de dépendance, de créer des composantes pour cacher
+            l'implémentation
+            et de garder la simplicité du développement web.</p>
+
+        <p>Pour installer Angular globalement sur les machines, il suffit d'éxécuter la commande suivante sur un
+            terminal: npm install -g @angular/cli@10.0.0</p>
+
+        <div class="pb-3">
+            <p>Suite à l'installation, il faut également installer et configurer le serveur Json:</p>
+            <ul>
+                <li>npm i g json-server</li>
+                <li>npm i faker</li>
+            </ul>
+        </div>
+
+        <div class="pb-3">
+            <p>Installation optionnelle du compilateur Typescript pour travailler depuis un projet Angular:</p>
+            <ul>
+                <li>npm install -g typescript@latest</li>
+                <li>npm install -g ts-node</li>
+            </ul>
+        </div>
+
+        <div class="pb-3">
+            <p>Pour utiliser les commandes d'Angular, il suffit d'utiliser les commandes qui commencent par "ng" suivi
+                de ce qu'on veut faire, voici quelques exemples:</p>
+            <dl>
+                <dt>Générer un nouveau projet:</dt>
+                <dd>ng new my-app</dd>
+                <dt>Générer un nouveau composant:</dt>
+                <dd>ng g c my-component</dd>
+                <dt>Générer une nouvelle classe:</dt>
+                <dd>ng g cl my-class-model</dd>
+                <dt>Générer une nouvelle interface:</dt>
+                <dd>ng g i my-interface</dd>
+                <dt>Générer des services:</dt>
+                <dd>ng g s my-service</dd>
+            </dl>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #tutoCrud>
+    <ng-container *ngIf="myParameter == 2; else tutoRelations">
+        <div class="container-fluid">
+            <h1 class="text-center pt-3 pb-3">Mini tutoriel CRUD</h1>
+            <p>Qu'est-ce que le CRUD? : Ce sont les méthodes qui permettent de communiquer avec ou de sauvegarder des
+                données avec la base de données.</p>
+            <div>
+                <ol>
+                    <li>[C]reate : Permet de créer un enregistrement de l'objet courant et de l'insérer dans une base de
+                        données.</li>
+                    <ul>Ex: Création d'un employé dans une banque.</ul>
+                    <li>[R]ead : Permet de lire/afficher les données de la base de données.</li>
+                    <ul>Ex: Lire/Afficher une liste d'employés.</ul>
+                    <li>[U]pdate : Permet de faire des mises à jour sur les enregistrements, c'est-à-dire pouvoir les
+                        modifier.</li>
+                    <ul>Ex: Mettre à jour le salaire d'un employé.</ul>
+                    <li>[D]elete : Permet de supprimer un ou plusieurs enregistrements d'une table dans la base de
+                        données.</li>
+                    <ul>Ex: Supprimer un employé d'une banque.</ul>
+                </ol>
+            </div>
+
+            <p>Pourquoi est-ce nécessaire? : Sans le CRUD, il n'y aurait pas d'autres moyens pour sauvegarder des
+                enregistrements importants. Ce sont les opérations de base pour pouvoir stocker les informations
+                dans une base de données et faire la persistance de données.</p>
+
+            <div class="pb-4">
+                <p>Les méthodes du CRUD sont semblables aux requêtes LMD(Language de Modification de Données) en SQL.
+                    Elles ont les mêmes fonctionalités, mais écrites différemment :</p>
+                <table class="col-md-4 table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">CRUD</th>
+                            <th scope="col">SQL</th>
+                            <th scope="col">POSTMAN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Create</td>
+                            <td>Insert</td>
+                            <td>Post</td>
+                        </tr>
+                        <tr>
+                            <td>Read</td>
+                            <td>Select</td>
+                            <td>Get</td>
+                        </tr>
+                        <tr>
+                            <td>Update</td>
+                            <td>Update</td>
+                            <td>Put</td>
+                        </tr>
+                        <tr>
+                            <td>Delete</td>
+                            <td>Delete</td>
+                            <td>Delete</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </ng-container>
+</ng-template>
+
+<ng-template #tutoRelations>
+    <div class="container-fluid pb-3">
+        <h1 class="text-center pt-3 pb-3">Mini tutorial sur les relations</h1>
+        <p>Qu'est-ce que c'est? : Les relations représentent les liens des objets qui sont reliés, c'est-à-dire leurs
+            rôles et ce qu'ils peuvent affecter.</p>
+
+        <div class="pb-3">
+            <p>Il existe plusieurs type de relations qu'un objet peut posséder, il sont montrés dans l'image ci-dessous.
+            </p>
+            <img [src]="['assets/images/tutoriels/relation.png']" alt="relationImage">
+        </div>
+
+        <div class="pb-4">
+            <p>L'association : Le premier objet A utilise le deuxième objet B ou bien vice-versa.</p>
+            <p>L'héritage : Un objet hérite d'un autre objet. Ex : Objet A hérite de Objet B.</p>
+            <p>La dépendance : Deux objets ou plus sont dépendants entre eux. S'il y a un changement dans un des objets,
+                les autres objets vont être affectés également.</p>
+            <p>Composition : Un objet ne peut pas exister sans l'autre, en d'autres termes, on ne peut pas supprimer
+                l'objet parent si un objet enfant existe. Ex : un livre ne peut pas exister sans une bibliothèque.
+                Si la bibliothèque est détruite, le livre qui fait partie de cette bibliothèque est également détruite.
+            </p>
+            <p>Aggrégation : C'est comme la composition, mais à un niveau plus faible. C'est-à-dire que les objets
+                peuvent exister de facon indépendante. Ex : une banque et des employés. Si on enlève la banque, les
+                employés
+                existent encore.</p>
+        </div>
+
+        <div>
+            <p>Parmi les relations, il existe également 3 types d'associations possibles :</p>
+            <ol>
+                <li>One-To-One : L'objet A est en relation de 1 à 1 avec l'objet B. C'est-à-dire que l'objet A devient
+                    un attribut dans l'objet B ou vice-versa.</li>
+                <li>One-To-Many : L'objet A est en relation de 1 à plusieurs avec l'objet B. Ce qui veut dire que dans
+                    l'objet A, il y aura un tableau d'objet B.</li>
+                <li>Many-To-Many : L'objet A est relation plusieurs à plusieurs avec l'objet B. Il faut créer un tableau
+                    intermédiaire qui relie les deux objets ayant cette relation. Cela permet de contenir les attributs
+                    primaires des deux objets.</li>
+            </ol>
+        </div>
+
+        <p><span class="text-danger text-capitalize font-weight-bold">ATTENTION : </span>Il faut savoir que le nombre de
+            classes dans un schéma relationnel doit être supérieur ou égal au nombre de classes
+            dans le diagramme UML. Le seul cas possible est lors d'une relation many-to-many, ce qui veut dire qu'il
+            faut créer la classe intermédiaire.</p>
+        <a href="https://github.com/zaratechs/420-345-G001-A20/wiki/TP-01-%5B2e-partie-AIDE%5D">Pour plus de références,
+            veuillez voir cette page.</a>
+    </div>
+</ng-template>

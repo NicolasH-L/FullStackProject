@@ -1,0 +1,164 @@
+<!--
+ * @Author Nicolas Hong-Lao
+ * matricule: 1460618
+ * Github user: NicolasH-L
+-->
+
+<div>
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <picture>
+                    <source [src]="['assets/images/voitures/2016-Mazda-CX-9-02-1400x500.jpg']"
+                        media="(min-width: 769px)">
+                    <img [src]="['assets/images/voitures/2016-Mazda-CX-9-02-1400x500.jpg']" alt="mazda"
+                        class="d-block img-fluid">
+                </picture>
+                <div class="carousel-caption">
+                    <div>
+                        <h1>Service à la clientèle rapide</h1>
+                        <h4>Disponible 24h/7 pour répondre à vos besoins</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source [src]="['assets/images/voitures/2016-vorsteiner-v-rt-porsche-991-turbo-01-1400x500.jpg']"
+                        media="(min-width: 769px)">
+                    <img [src]="['assets/images/voitures/2016-vorsteiner-v-rt-porsche-991-turbo-01-1400x500.jpg']"
+                        alt="porsche" class="d-block img-fluid">
+                </picture>
+                <div class="carousel-caption justify-content-center align-items-center">
+                    <div>
+                        <h1>Simple et facile</h1>
+                        <h4>Seulement un formulaire à remplir</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source [src]="['assets/images/voitures/rsz_corolla_combo_2019_001-1400x500.jpg']"
+                        media="(min-width: 769px)">
+                    <img [src]="['assets/images/voitures/rsz_corolla_combo_2019_001-1400x500.jpg']" alt="toyota"
+                        class="d-block img-fluid">
+                </picture>
+                <div class="carousel-caption justify-content-center align-items-center">
+                    <div>
+                        <h1>Nous offrons des locations à un prix juste</h1>
+                        <h4>Frais supplémentaires en cas d'accident volontaire ou de vandalisme</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div class="container col-lg-10">
+    <div class="text-center pt-3 pb-3">
+        <h1>Locations de voitures</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="rounded-circle" [src]="['assets/images/voitures/oli-woodman-fwYZ3B_QQco-unsplash.jpg']"
+                alt="carImage1" width="240" height="240">
+            <h2>Hatchback</h2>
+            <p>Parfait pour l'économie d'essence et abordable, cela répondra à vos besoins
+                minimaliste.</p>
+            <a class="btn btn-secondary bg-primary" href="https://driving.ca/bodystyle/hatchback" role="button">Voir
+                quelques exemples »</a>
+        </div>
+        <div class="col-lg-4">
+            <img class="rounded-circle" [src]="['assets/images/voitures/sahil-patel-7KFGoBwMCyI-unsplash.jpg']"
+                alt="carImage2" width="240" height="240">
+            <h2>VUS</h2>
+            <p>Vous avez besoin plus d'espace de chargement? Vous comptez avoir une famille? Les véhicules utilitaires
+                sports seront un très bon choix pour vos déplacements.</p>
+            <a class="btn btn-secondary bg-primary"
+                href="https://rpmweb.ca/fr/chroniques/meilleurs-achats/quels-sont-les-meilleurs-vus-compacts-2020-selon-rpm"
+                role="button">Voir quelques exemples »</a>
+        </div>
+        <div class="col-lg-4">
+            <img class="rounded-circle" [src]="['assets/images/voitures/sohaibvirk-virk-2QCbme88doo-unsplash.jpg']"
+                alt="carImage3" width="240" height="240">
+            <h2>Sport</h2>
+            <p>Parfait pour ceux qui manquent d'adrénaline et qui ont le besoin de ressentir la vitesse des bolides
+                sports
+                qui ne sont pas commes les autres. Ces voitures ne vous décevront pas!</p>
+            <a class="btn btn-secondary bg-primary"
+                href="https://www.caranddriver.com/features/g27197524/best-sports-cars/" role="button">Voir quelques
+                exemples »</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row featurette col-lg-12 justify-content-between">
+        <div class="col-md-8">
+            <h2 class="featurette-heading">Qu'est-ce qu'un <i>hatchback</i>?</h2>
+            <p class="lead">Une voiture ayant un <i>"hatchback"</i> ou un hayon en francais veut designer la porte
+                arrière de
+                l'automobile.
+                Ce dernier est généralement équipé avec un essuie-glace et d'un système de dégivreur. Ce style de
+                voiture est disponible
+                sur certaines modèles offerte par les fabriquants</p>
+        </div>
+        <div class="col-md-4">
+            <img class="featurette-image img-fluid" data-src="holder.js/350x350/auto" alt="350x350"
+                style="width: 350px; height: 350px;" [src]="['assets/images/voitures/hatchbackTrunkOpening.gif']"
+                data-holder-rendered="true">
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Qu'est-ce qu'un VUS?</h2>
+            <p class="lead">Un VUS ou Véhicule Utilitaire Sport est un type de véhicule familial généralement
+                doté d'une espace volumineuse et qui peut possèder des caractéristiques de tout-terrain ou de
+                remorquage avec des charges élevées. Les VUS sont principalement plus grands que les voitures normales
+                pour pouvoir accomoder toute forme de chargement possible. De plus, la majorité des VUS sont équipés
+                avec
+                la transmission intégrale intelligente, parfois appelé AWD (All Wheel Drive).</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="350x350"
+                [src]="['assets/images/voitures/hiclipart.com.png']" data-holder-rendered="true"
+                style="width: 350px; height: 350px;">
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row featurette pb-4 col-lg-12 justify-content-between">
+        <div class="col-md-8">
+            <h2 class="featurette-heading">Qu'est-ce qu'une voiture sport?</h2>
+            <p class="lead">Ces voitures ont des caractéristiques qui ne se retrouvent pas dans la plupart des voitures
+                de tous les jours.
+                Elles sont munis d'un moteur plus puissant généralement entre 250hp et 500hp dans certaines modèles. La
+                fabrication de ces voitures sont de haute qualité et
+                possèdent de meilleurs freins ou des accessoires supplémentaires, etc. L'avantage de ces bolides
+                est l'accélération instantanée. En effet, cela prend entre 3 à 5 secondes pour se rendre
+                de 0 à 100km/h et la vitesse maximale est entre 200km/h et 300km/h sur certains modèles.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/400x350/auto" alt="400x350"
+                [src]="['assets/images/voitures/mclarenP1.gif']" data-holder-rendered="true"
+                style="width: 400px; height: 350px;">
+        </div>
+    </div>
+</div>
