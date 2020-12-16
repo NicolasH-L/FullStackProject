@@ -7,6 +7,10 @@
     width:100%;
 }
 
+.carousel-caption{
+    height: 80%;
+}
+
 .bg-gradient {
     background: linear-gradient(to top, #000000 0%, #ffffff 100%)
 }
