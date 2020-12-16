@@ -11,7 +11,7 @@ Projet certificatif du cours 420-345
 ==========Étape pour créer un projet Angular============
 1. Créer un répertoire Workspace dans l'emplacement qu'on désire
 
-1. Ouvrir un git bash et exécuter la commande : ng n nomDuProjet -- routing
+1. Ouvrir un git bash et exécuter la commande dans le répertoire : ng n nomDuProjet -- routing
 
 2. Toujours dans le git bash, lancer Visual Studio code en exécutant : code .
 

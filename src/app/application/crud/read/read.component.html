@@ -23,8 +23,8 @@
                     <td>{{item.fabriquant}}</td>
                     <td>{{item.paiement}}</td>
                     <td>
-                        <a [routerLink]="['/readOnlyForm', item.id]" class="btn btn-info">Afficher</a>
-                        <a [routerLink]="['/updateForm/', item.id]" class="btn btn-warning">Update</a>
+                        <a [routerLink]="['/readOnlyForm', item.id]" class="btn btn-info mr-2">Afficher</a>
+                        <a [routerLink]="['/updateForm/', item.id]" class="btn btn-warning mr-2">Update</a>
                         <button type="button" (click)="delete(item.id, i)" class="btn btn-danger">Supprimer</button>
                     </td>
                 </tr>

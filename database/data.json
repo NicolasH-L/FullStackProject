@@ -1,22 +1,13 @@
 {
   "apiFullstack": [
     {
-      "nom": "sad",
-      "prenom": "esct",
+      "nom": "test",
+      "prenom": "cvbcbcc",
       "modele": "VUS",
       "couleur": "Rouge",
-      "fabriquant": "Mercedes",
+      "fabriquant": "Ferrari",
       "paiement": "Mensuel",
       "id": 1
-    },
-    {
-      "nom": "tsgdrdngmgmn",
-      "prenom": "dhdgdghdhdh",
-      "modele": "Sport",
-      "couleur": "Gris",
-      "fabriquant": "Chevrolet",
-      "paiement": "Hebdomadaire",
-      "id": 2
     }
   ]
 }
