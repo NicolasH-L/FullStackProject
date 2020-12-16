@@ -9,7 +9,7 @@
         <div class="container-fluid">
 
             <a href="https://github.com/NicolasH-L/ProjetFullStack" class="navbar-brand font-weight-bold text-white">
-                <i class="fas fa-car fa-2x"></i><span class="ml-4">Nicolas H-L</span></a>
+                <i class="fas fa-car fa-2x align-middle"></i><span class="ml-4 align-middle">Nicolas H-L</span></a>
             <button class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav"><span
                     class="navbar-toggler-icon"></span></button>
 
@@ -23,25 +23,27 @@
                     </li>
 
                     <li class="nav-item"><a routerLink="accueil"
-                            class="nav-link font-weight-bold text-capitalize text-light">Accueil</a></li>
+                            class="nav-link font-weight-bold text-capitalize text-light align-middle">Accueil</a></li>
                     <li class="nav-item dropdown" data-toggle="dropdown">
-                        <a class="nav-link font-weight-bold text-capitalize text-light dropdown-toggle">Tutoriels</a>
+                        <a
+                            class="nav-link font-weight-bold text-capitalize text-light dropdown-toggle align-middle">Tutoriels</a>
                         <div class="dropdown-menu">
                             <a [routerLink]="['/tutoriel', 1]" class="dropdown-item">Mini tutoriel Angular 10</a>
                             <a [routerLink]="['/tutoriel', 2]" class="dropdown-item">Mini tutoriel CRUD</a>
                             <a [routerLink]="['/tutoriel', 3]" class="dropdown-item">Mini tutoriel des relations</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a [routerLink]="['formulaire']"
-                            class="nav-link font-weight-bold text-capitalize text-light">Formulaire</a></li>
-                    <li class="nav-item"><a [routerLink]="['crud']"
-                            class="nav-link font-weight-bold text-capitalize text-light">CRUD</a></li>
+                    <li class="nav-item"><a [routerLink]="['/formulaire']"
+                            class="nav-link font-weight-bold text-capitalize text-light align-middle">Formulaire</a>
+                    </li>
+                    <li class="nav-item"><a [routerLink]="['/crud']"
+                            class="nav-link font-weight-bold text-capitalize text-light align-middle">CRUD</a></li>
                     <li class="nav-item"><a [routerLink]="['/fun']"
-                            class="nav-link font-weight-bold text-capitalize text-light">Fun</a></li>
+                            class="nav-link font-weight-bold text-capitalize text-light align-middle">Fun</a></li>
                     <li class="nav-item"><a [routerLink]="['/youtube']"
-                            class="nav-link font-weight-bold text-capitalize text-light">Youtube</a></li>
+                            class="nav-link font-weight-bold text-capitalize text-light align-middle">Youtube</a></li>
                     <li class="nav-item"><a [routerLink]="['/contact']"
-                            class="nav-link font-weight-bold text-capitalize text-light">Contact</a></li>
+                            class="nav-link font-weight-bold text-capitalize text-light align-middle">Contact</a></li>
                 </ul>
             </div>
         </div>

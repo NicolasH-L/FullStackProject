@@ -1,4 +1,7 @@
 .bg-fun{
-    background-image: url(src\assets\images\teriteri\118702988_165028611861671_2494664584414478415_o.jpg);
+    background-image: url('src/assets/images/teriteri/f803b96bc0d8ae42942fa0df20c5783e.png');
     background-repeat: no-repeat;
+    background-position: center center;
+    background-color: black;
+    background-size: 90%;
 }

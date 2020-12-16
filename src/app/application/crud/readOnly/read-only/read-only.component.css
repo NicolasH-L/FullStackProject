@@ -1,13 +1,13 @@
 .registration-form{
     padding: 40px;
-    background-image: url('src\assets\images\voitures\34444c734f95e15b48a6553180600492.jpg');
+    background-image: url('src/assets/images/voitures/34444c734f95e15b48a6553180600492.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .registration-form form{
-    background-color: rgba(165, 168, 165, 0.500);
+    background-color: rgba(255, 255, 255, 0.450);
     max-width: 600px;
     margin: auto;
     padding: 50px 70px;

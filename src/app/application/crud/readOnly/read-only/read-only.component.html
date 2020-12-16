@@ -5,37 +5,39 @@
 -->
 
 <div class="registration-form">
-    <h2 class="text-center">Affichage de la location</h2>
+    <h2 class="text-center">Affichage de la location #{{id}}</h2>
     <form [formGroup]="readOnlyForm">
 
         <div class="form-group">
             <label for="nom">Nom</label>
-            <input class="form-control" id="nom" formControlName="nom" [(ngModel)]="voiture.nom" readonly/>
+            <input class="form-control" id="nom" formControlName="nom" [(ngModel)]="voiture.nom" readonly />
         </div>
 
         <div class="form-group">
             <label for="prenom">Prénom</label>
-            <input class="form-control" id="prenom" formControlName="prenom" [(ngModel)]="voiture.prenom" readonly/>
+            <input class="form-control" id="prenom" formControlName="prenom" [(ngModel)]="voiture.prenom" readonly />
         </div>
 
         <div class="form-group">
             <label for="modele">Modèle</label>
-            <input class="form-control" id="modele" formControlName="modele" [(ngModel)]="voiture.modele" readonly/>
+            <input class="form-control" id="modele" formControlName="modele" [(ngModel)]="voiture.modele" readonly />
         </div>
 
         <div class="form-group">
             <label for="couleur">Couleur</label>
-            <input class="form-control" id="couleur" formControlName="couleur" [(ngModel)]="voiture.couleur" readonly/>
+            <input class="form-control" id="couleur" formControlName="couleur" [(ngModel)]="voiture.couleur" readonly />
         </div>
 
         <div class="form-group">
             <label for="fabriquant">Fabriquant</label>
-            <input class="form-control" id="fabriquant" formControlName="fabriquant" [(ngModel)]="voiture.fabriquant" readonly/>
+            <input class="form-control" id="fabriquant" formControlName="fabriquant" [(ngModel)]="voiture.fabriquant"
+                readonly />
         </div>
 
         <div class="form-group">
             <label for="paiement">Type de paiement</label>
-            <input class="form-control" id="paiement" formControlName="paiement" [(ngModel)]="voiture.paiement" readonly/>
+            <input class="form-control" id="paiement" formControlName="paiement" [(ngModel)]="voiture.paiement"
+                readonly />
         </div>
 
         <button [routerLink]="['/crud']" class="btn btn-info">Revenir</button>

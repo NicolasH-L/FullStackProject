@@ -6,27 +6,29 @@
 
 <div class="container-fluid">
     <h2 class="text-center pt-3 pb-3">Liste de locations pour une voiture</h2>
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th *ngFor="let enTete of headElements" scope="col">{{enTete}}</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of listVoitures; let i = index">
-                <td>{{item.id}}</td>
-                <td>{{item.nom}}</td>
-                <td>{{item.prenom}}</td>
-                <td>{{item.modele}}</td>
-                <td>{{item.couleur}}</td>
-                <td>{{item.fabriquant}}</td>
-                <td>{{item.paiement}}</td>
-                <td>
-                    <a [routerLink]="['/readOnlyForm', item.id]" class="btn btn-info">Afficher</a>
-                    <a [routerLink]="['/updateForm/', item.id]" class="btn btn-warning">Update</a>
-                    <button type="button" (click)="delete(item.id, i)" class="btn btn-danger">Supprimer</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th *ngFor="let enTete of headElements" scope="col">{{enTete}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listVoitures; let i = index">
+                    <td>{{item.id}}</td>
+                    <td>{{item.nom}}</td>
+                    <td>{{item.prenom}}</td>
+                    <td>{{item.modele}}</td>
+                    <td>{{item.couleur}}</td>
+                    <td>{{item.fabriquant}}</td>
+                    <td>{{item.paiement}}</td>
+                    <td>
+                        <a [routerLink]="['/readOnlyForm', item.id]" class="btn btn-info">Afficher</a>
+                        <a [routerLink]="['/updateForm/', item.id]" class="btn btn-warning">Update</a>
+                        <button type="button" (click)="delete(item.id, i)" class="btn btn-danger">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

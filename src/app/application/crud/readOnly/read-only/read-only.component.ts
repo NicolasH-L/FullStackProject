@@ -21,7 +21,7 @@ export class ReadOnlyComponent implements OnInit {
   voiture: Voiture;
   readOnlyForm: FormGroup;
 
-  constructor(private service: VoitureService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private service: VoitureService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
