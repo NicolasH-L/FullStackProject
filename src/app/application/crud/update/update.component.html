@@ -6,7 +6,7 @@
 
 <div class="registration-form">
     <h2 class="text-center">Mise à jour du formulaire de location</h2>
-    <form [formGroup]="updateCarForm" (ngSubmit)="updateCar()">
+    <form [formGroup]="updateCarForm" (ngSubmit)="updateCar()" style="font-size: 1.15em;">
         <div *ngIf="checkMessage  != ''">
             <h4 class="has-info">{{checkMessage}}</h4>
         </div>
@@ -17,6 +17,7 @@
             <div *ngIf="!carFormUpdate.nom.valid && (carFormUpdate.nom.dirty || carFormUpdate.nom.touched)">
                 <div [hidden]="!carFormUpdate.nom.errors.required">Ce champs est obligatoire</div>
                 <div [hidden]="!carFormUpdate.nom.errors.minlength">L'élément doit contenir au moins 2 charactères</div>
+                <div [hidden]="!carFormUpdate.nom.errors.maxlength">L'élément ne doit pas dépasser 30 charactères</div>
             </div>
         </div>
 
@@ -25,8 +26,8 @@
             <input id="name" formControlName="prenom" class="form-control" [(ngModel)]="voiture.prenom" />
             <div *ngIf="!carFormUpdate.prenom.valid && (carFormUpdate.prenom.dirty || carFormUpdate.prenom.touched)">
                 <div [hidden]="!carFormUpdate.prenom.errors.required">Ce champs est obligatoire</div>
-                <div [hidden]="!carFormUpdate.prenom.errors.minlength">L'élément doit contenir au moins 2 charactères
-                </div>
+                <div [hidden]="!carFormUpdate.prenom.errors.minlength">L'élément doit contenir au moins 2 charactères</div>
+                <div [hidden]="!carFormUpdate.prenom.errors.maxlength">L'élément ne doit pas dépasser 30 charactères</div>
             </div>
         </div>
 
@@ -85,12 +86,9 @@
             </select>
         </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="submit"></label>
-            <div class="col-md-8">
-                <button id="submit" name="submit" class="btn btn-success">Soumettre</button>
-                <a routerLink="/crud" id="cancel" name="cancel" class="btn btn-danger">Annuler</a>
-            </div>
+        <div class="form-group text-right mt-5">
+            <button id="submit" name="submit" class="btn btn-light mr-2">Soumettre</button>
+            <a [routerLink]="['/crud']" id="cancel" name="cancel" class="btn btn-dark">Annuler</a>
         </div>
     </form>
 </div>

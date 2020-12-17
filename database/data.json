@@ -1,11 +1,11 @@
 {
   "apiFullstack": [
     {
-      "nom": "test",
-      "prenom": "test",
-      "modele": "VUS",
-      "couleur": "Rouge",
-      "fabriquant": "Ferrari",
+      "nom": "Doe",
+      "prenom": "John",
+      "modele": "Sport",
+      "couleur": "Cyan",
+      "fabriquant": "Mercedes",
       "paiement": "Mensuel",
       "id": 1
     }

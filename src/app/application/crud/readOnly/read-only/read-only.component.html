@@ -6,7 +6,7 @@
 
 <div class="registration-form">
     <h2 class="text-center">Affichage de la location #{{id}}</h2>
-    <form [formGroup]="readOnlyForm">
+    <form [formGroup]="readOnlyForm" style="font-size: 1.15em;">
 
         <div class="form-group">
             <label for="nom">Nom</label>
@@ -40,6 +40,8 @@
                 readonly />
         </div>
 
-        <button [routerLink]="['/crud']" class="btn btn-info">Revenir</button>
+        <div class="form-group text-right mt-5">
+            <button [routerLink]="['/crud']" class="btn btn-info">Revenir</button>
+        </div>
     </form>
 </div>

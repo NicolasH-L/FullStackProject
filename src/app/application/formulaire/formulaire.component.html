@@ -6,98 +6,105 @@
 
 <div class="registration-form">
     <h2 class="text-center">Formulaire de location d'une voiture</h2>
-    <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
-        <div *ngIf="checkMessage  != ''">
-            <h4 class="has-info">{{checkMessage}}</h4>
-        </div>
+    <div class="container">
+        <form [formGroup]="carForm" (ngSubmit)="onSubmit()" style="font-size: 1.15em;">
+            <div *ngIf="checkMessage  != ''">
+                <h4 class="has-info">{{checkMessage}}</h4>
+            </div>
 
-        <div class="form-group">
-            <label for="name">Nom</label>
-            <input id="name" formControlName="nom" class="form-control" />
-            <div *ngIf="!form2.nom.valid && (form2.nom.dirty || form2.nom.touched)">
-                <div [hidden]="!form2.nom.errors.required">Ce champs est obligatoire</div>
-                <div [hidden]="!form2.nom.errors.minlength">L'élément doit contenir au moins 2 charactères</div>
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input id="name" formControlName="nom" class="form-control" />
+                <div *ngIf="!form2.nom.valid && (form2.nom.dirty || form2.nom.touched)">
+                    <div [hidden]="!form2.nom.errors.required">Ce champs est obligatoire</div>
+                    <div [hidden]="!form2.nom.errors.minlength">L'élément doit contenir au moins 2 charactères</div>
+                    <div [hidden]="!form2.nom.errors.maxlength">L'élément ne doit pas dépasser 30 charactères</div>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label for="name">Prénom</label>
-            <input id="name" formControlName="prenom" class="form-control" />
-            <div *ngIf="!form2.prenom.valid && (form2.prenom.dirty || form2.prenom.touched)">
-                <div [hidden]="!form2.prenom.errors.required">Ce champs est obligatoire</div>
-                <div [hidden]="!form2.prenom.errors.minlength">L'élément doit contenir au moins 2 charactères</div>
-            </div>
-        </div>
+            <div class="form-group">
+                <label for="name">Prénom</label>
+                <input id="name" formControlName="prenom" class="form-control" />
+                <div *ngIf="!form2.prenom.valid && (form2.prenom.dirty || form2.prenom.touched)">
+                    <div [hidden]="!form2.prenom.errors.required">Ce champs est obligatoire</div>
+                    <div [hidden]="!form2.prenom.errors.minlength">L'élément doit contenir au moins 2 charactères</div>
+                    <div [hidden]="!form2.prenom.errors.maxlength">L'élément ne doit pas dépasser 30 charactères</div>
 
-        <p>Type de modèle</p>
-        <div class="form-group">
-            <div class="form-check">
-                <input type="radio" class="form-check-input" formControlName="modele" id="modeleHatchback"
-                    value="Hatchback" ngModel>
-                <label for="modeleHatchback" class="form-check-label">Hatchback</label>
+                </div>
             </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" formControlName="modele" id="modeleVUS" value="VUS"
-                    ngModel>
-                <label for="modeleVUS" class="form-check-label">VUS</label>
-            </div>
-            <div class="form-check">
-                <input type="radio" class="form-check-input" formControlName="modele" id="modeleSport" value="Sport"
-                    ngModel>
-                <label for="modeleSport" class="form-check-label">Sport</label>
-            </div>
-        </div>
 
-        <div class="form-group">
-            <label for="couleur">Couleur</label>
-            <select class="form-control" id="couleur" formControlName="couleur">
-                <option>Blanc</option>
-                <option>Rouge</option>
-                <option>Bleue</option>
-                <option>Gris</option>
-                <option>Vert</option>
-                <option>Argent</option>
-                <option>Cyan</option>
-                <option>Jaune</option>
-                <option>Orange</option>
-                <option>Noir</option>
-            </select>
-            <div *ngIf="!form2.couleur.valid && (form2.couleur.dirty || form2.couleur.touched)">
-                <div [hidden]="!form2.couleur.errors.required">Ce champs est obligatoire</div>
+            <p>Type de modèle</p>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" formControlName="modele" id="modeleHatchback"
+                        value="Hatchback" ngModel>
+                    <label for="modeleHatchback" class="form-check-label">Hatchback</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" formControlName="modele" id="modeleVUS" value="VUS"
+                        ngModel>
+                    <label for="modeleVUS" class="form-check-label">VUS</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" formControlName="modele" id="modeleSport" value="Sport"
+                        ngModel>
+                    <label for="modeleSport" class="form-check-label">Sport</label>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label for="fabriquant">Fabriquant</label>
-            <select class="form-control" id="fabriquant" formControlName="fabriquant">
-                <option>Ford</option>
-                <option>Toyota</option>
-                <option>Honda</option>
-                <option>Chevrolet</option>
-                <option>Ferrari</option>
-                <option>Mercedes</option>
-                <option>Porsche</option>
-                <option>Dodge</option>
-                <option>Mazda</option>
-                <option>Volkswagen</option>
-            </select>
-            <div *ngIf="!form2.fabriquant.valid && (form2.fabriquant.dirty || form2.fabriquant.touched)">
-                <div [hidden]="!form2.fabriquant.errors.required">Ce champs est obligatoire</div>
+            <div class="form-group">
+                <label for="couleur">Couleur</label>
+                <select class="form-control" id="couleur" formControlName="couleur">
+                    <option>Blanc</option>
+                    <option>Rouge</option>
+                    <option>Bleue</option>
+                    <option>Gris</option>
+                    <option>Vert</option>
+                    <option>Argent</option>
+                    <option>Cyan</option>
+                    <option>Jaune</option>
+                    <option>Orange</option>
+                    <option>Noir</option>
+                </select>
+                <div *ngIf="!form2.couleur.valid && (form2.couleur.dirty || form2.couleur.touched)">
+                    <div [hidden]="!form2.couleur.errors.required">Ce champs est obligatoire</div>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label for="paiement">Type de paiement</label>
-            <select class="form-control" id="paiement" formControlName="paiement">
-                <option>Quotidien</option>
-                <option>Hebdomadaire</option>
-                <option>Mensuel</option>
-            </select>
-            <div *ngIf="!form2.paiement.valid && (form2.paiement.dirty || form2.paiement.touched)">
-                <div [hidden]="!form2.paiement.errors.required">Ce champs est obligatoire</div>
+            <div class="form-group">
+                <label for="fabriquant">Fabriquant</label>
+                <select class="form-control" id="fabriquant" formControlName="fabriquant">
+                    <option>Ford</option>
+                    <option>Toyota</option>
+                    <option>Honda</option>
+                    <option>Chevrolet</option>
+                    <option>Ferrari</option>
+                    <option>Mercedes</option>
+                    <option>Porsche</option>
+                    <option>Dodge</option>
+                    <option>Mazda</option>
+                    <option>Volkswagen</option>
+                </select>
+                <div *ngIf="!form2.fabriquant.valid && (form2.fabriquant.dirty || form2.fabriquant.touched)">
+                    <div [hidden]="!form2.fabriquant.errors.required">Ce champs est obligatoire</div>
+                </div>
             </div>
-        </div>
 
-        <button class="btn btn-primary">Soumettre</button>
-    </form>
+            <div class="form-group">
+                <label for="paiement">Type de paiement</label>
+                <select class="form-control" id="paiement" formControlName="paiement">
+                    <option>Quotidien</option>
+                    <option>Hebdomadaire</option>
+                    <option>Mensuel</option>
+                </select>
+                <div *ngIf="!form2.paiement.valid && (form2.paiement.dirty || form2.paiement.touched)">
+                    <div [hidden]="!form2.paiement.errors.required">Ce champs est obligatoire</div>
+                </div>
+            </div>
+
+            <div class="form-group text-right mt-5">
+                <button class="btn btn-primary">Soumettre</button>
+            </div>
+        </form>
+    </div>
 </div>

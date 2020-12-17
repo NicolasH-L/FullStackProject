@@ -18,8 +18,8 @@ import { VoitureService } from '../crud/services/voiture.service';
 export class FormulaireComponent implements OnInit {
 
   carForm = new FormGroup({
-    nom: new FormControl('', [Validators.required, Validators.minLength(2)]),
-    prenom: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    nom: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]),
+    prenom: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]),
     modele: new FormControl('', Validators.required),
     couleur: new FormControl('', Validators.required),
     fabriquant: new FormControl('', Validators.required),
