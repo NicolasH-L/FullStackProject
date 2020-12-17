@@ -1,7 +1,8 @@
 .bg-contact{
     background-image: url('src/assets/images/voitures/Chevrolet-Redline-Special-Editions-4.jpg');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+    background-size: cover;
 }
 
 h2{
