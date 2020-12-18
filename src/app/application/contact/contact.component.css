@@ -13,6 +13,12 @@
     border-radius: 15px;
 }
 
+.bg-joindre{
+    background-color: rgba(0, 0, 0, 0.200);
+    padding: 5px 5px;
+    border-radius: 15px;
+}
+
 h2{
     color: whitesmoke;
 }
