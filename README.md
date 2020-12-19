@@ -11,14 +11,14 @@ Projet certificatif du cours 420-345
 ==========Étape pour créer un projet Angular============
 1. Créer un répertoire Workspace dans l'emplacement qu'on désire
 
-1. Ouvrir un git bash et exécuter la commande dans le répertoire : ng n nomDuProjet -- routing
+1. Entrer dans le répertoire et ouvrir un git bash afin d'exécuter la commande suivante pour créer un projet : ng n nomDuProjet --routing
 
 2. Toujours dans le git bash, lancer Visual Studio code en exécutant : code .
 
 3. Installer les librairies:
-  npm i jquery --save
-  npm i bootstrap --save
-  npm i json-server --save
+  npm i jquery
+  npm i bootstrap
+  npm i json-server 
   npm i @fortawesome/fontawesome-free --save
 
 4. Configurer les options dans le fichier Angular.json du projet pour ajouter jQuery et bootstrap 
@@ -35,6 +35,8 @@ Projet certificatif du cours 420-345
 5. Dans app.module.ts, il faut importer ces 2 modules :
   import { HttpClientModule } from '@angular/common/http';
   import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+  
+  Toujours dans app.module.ts, ajouter manuellement les deux modules dans la categorie "imports"
 
 6. Supprimer le HTML du app.component.html et le remplacer par les balises suivantes :
   |-----------------|
@@ -48,7 +50,9 @@ On rajoute notre propre port désiré.
 8. Dans la création du service de l'objet, il faut spécifier le port du http dans le constructeur : 
 super(http, "http://localhost:3200/apiFullstack");
 
-9. Exécuter le projet dans la terminale avec la commande : npm start
+9. Exécuter la commande suivante pour lancer le serveur Json : json-server -w nomDuFichierJson.json --port 3200
+
+10. Exécuter le projet dans le terminal avec la commande : npm start
 
 ==========================================================================
 Note de cours

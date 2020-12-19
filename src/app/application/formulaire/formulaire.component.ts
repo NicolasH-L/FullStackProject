@@ -43,6 +43,7 @@ export class FormulaireComponent implements OnInit {
       this.service.post(this.carForm.value).subscribe(data => {
         this.carForm.reset();
         this.router.navigateByUrl('/accueil');
+        window.alert("Location de voiture accepté!")
       });
     } else {
       this.checkMessage = "Veuillez remplir le formulaire au complet!";
